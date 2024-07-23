@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/Product.css';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../actions/cartActions';
 import { toast } from 'react-toastify';
 
 const Product = ({ product }) => {
-  const navigate = useNavigate();
+
   const dispatch = useDispatch();
 
   // const handleProductClick = () => {

@@ -24,7 +24,7 @@ const Profile = () => {
     if (user.token) {
       dispatch(getUserInfo(user.token));
     }
-  }, [user.token]);
+  }, [user.token,dispatch]);
 
   const toggleAddresses = () => {
     setAddressesVisible(!addressesVisible);

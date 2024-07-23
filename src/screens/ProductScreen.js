@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { addToCart } from '../actions/cartActions';
 import '../styles/ProductScreen.css';
@@ -9,8 +9,7 @@ const ProductScreen = (props) => {
   const  {state}  = useLocation()
   const product = state?.product;
   const dispatch = useDispatch();
-  const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
+
   const [quantity, setQuantity] = useState(1);
 
   if (!product) {
