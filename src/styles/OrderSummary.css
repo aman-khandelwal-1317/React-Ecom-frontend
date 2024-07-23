@@ -1,0 +1,178 @@
+/* src/styles/Checkout.css */
+.checkout-container {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.checkout-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.checkout-column {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.address-selection {
+  margin-bottom: 20px;
+}
+
+.address-card {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background: #f96a65;
+}
+
+.address-card.selected {
+  border-color: #007bff51;
+  background: #6ec1f1;
+}
+
+.add-new-address button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.add-new-address button:hover {
+  background-color: #0056b3;
+}
+
+.payment-method-selection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.payment-method-card {
+  width: 48%;
+  padding: 1rem;
+  margin: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.payment-method-card.selected {
+  background-color: #f0f0f0;
+  border: 1px solid #007bff;
+}
+
+.payment-method-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.confirm-order-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.confirm-order-button:hover {
+  background-color: #218838;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content .form-group {
+  margin-bottom: 15px;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
