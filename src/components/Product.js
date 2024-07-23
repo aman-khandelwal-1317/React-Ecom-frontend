@@ -9,18 +9,18 @@ const Product = ({ product }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleProductClick = () => {
-    navigate(`/product/${product._id}`, { state: { product } });
-  };
+  // const handleProductClick = () => {
+  //   navigate(`/product/${product._id}`, { state: { product } });
+  // };
 
   const addToCartHandler = () => {
     dispatch(addToCart(product._id, 1));
     toast.success("Product Added to Cart!!")
   };
 
-  const handleBuyNow = () => {
-    navigate(`/product/${product._id}`);
-  };
+  // const handleBuyNow = () => {
+  //   navigate(`/product/${product._id}`);
+  // };
 
   return (
     <div className="product">

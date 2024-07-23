@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { addToCart } from '../actions/cartActions';
 import '../styles/ProductScreen.css';
 import { toast } from 'react-toastify';
@@ -8,9 +8,7 @@ import { toast } from 'react-toastify';
 const ProductScreen = (props) => {
   const  {state}  = useLocation()
   const product = state?.product;
-  const { id } = useParams();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
   const [quantity, setQuantity] = useState(1);
@@ -25,13 +23,13 @@ const ProductScreen = (props) => {
     toast.success("Product Added to Cart!!")
   };
 
-  const buyNowHandler = () => {
-    if (!userInfo) {
-      navigate('/login');
-    } else {
-      navigate('/order-summary', { state: { product, quantity } });
-    }
-  };
+  // const buyNowHandler = () => {
+  //   if (!userInfo) {
+  //     navigate('/login');
+  //   } else {
+  //     navigate('/order-summary', { state: { product, quantity } });
+  //   }
+  // };
 
   return (
     <div className="product-screen">

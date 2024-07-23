@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { getUserInfo } from '../actions/userActions';
 
 const PrivateRoute = ({ children }) => {
 

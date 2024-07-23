@@ -1,7 +1,5 @@
 import axios from 'axios';
 import { CART_ADD_ITEM, CART_REMOVE_ITEM , CART_SAVE_LOCAL_STORAGE, INCREASE_QUANTITY, DECREASE_QUANTITY,ORDER_SUCCESSFUL} from '../constants/cartConstants';
-import { toast } from 'react-toastify';
-
 
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
   var { data } = await axios.get(`https://mern-ecom-zyjy.onrender.com/api/products/${id}`);
