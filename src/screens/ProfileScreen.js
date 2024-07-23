@@ -48,7 +48,7 @@ const Profile = () => {
   const handleNewAddressSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3001/api/users/address', newAddress, {
+      await axios.post('https://mern-ecom-zyjy.onrender.com/api/users/address', newAddress, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },

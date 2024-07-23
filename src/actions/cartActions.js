@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 
 
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
-  var { data } = await axios.get(`http://localhost:3001/api/products/${id}`);
+  var { data } = await axios.get(`https://mern-ecom-zyjy.onrender.com/api/products/${id}`);
 
   data = data.product
 

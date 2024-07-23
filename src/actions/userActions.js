@@ -12,7 +12,7 @@ export const register = (name, email, password) => async (dispatch) => {
       },
     };
 
-    const { data } = await axios.post('http://localhost:3001/api/users', { name, email, password }, config);
+    const { data } = await axios.post('https://mern-ecom-zyjy.onrender.com/api/users', { name, email, password }, config);
    
     dispatch({ type: USER_REGISTER_SUCCESS, payload: data });
   } catch (error) {
@@ -34,7 +34,7 @@ export const login = (email, password) => async (dispatch) => {
         },
       };
   
-      const { data } = await axios.post('http://localhost:3001/api/users/login', { email, password }, config);
+      const { data } = await axios.post('https://mern-ecom-zyjy.onrender.com/api/users/login', { email, password }, config);
   
       dispatch({ type: USER_LOGIN_SUCCESS, payload: data });
   
@@ -56,7 +56,7 @@ export const login = (email, password) => async (dispatch) => {
       },
     };
 
-    const { data } = await axios.get('http://localhost:3001/api/users/info', config);
+    const { data } = await axios.get('https://mern-ecom-zyjy.onrender.com/api/users/info', config);
 
     dispatch({type : GET_USER_INFO , payload : data
     });

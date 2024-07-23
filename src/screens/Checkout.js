@@ -40,7 +40,7 @@ const Checkout = () => {
   const handleNewAddressSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:3001/api/users/address', newAddress, {
+      const { data } = await axios.post('https://mern-ecom-zyjy.onrender.com/api/users/address', newAddress, {
         headers: {
           Authorization: `Bearer ${user.token}`
         }
@@ -65,7 +65,7 @@ const Checkout = () => {
 
     try {
       await axios.post(
-        'http://localhost:3001/api/orders',
+        'https://mern-ecom-zyjy.onrender.com/api/orders',
         orderData,
         {
           headers: {

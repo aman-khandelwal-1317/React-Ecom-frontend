@@ -9,7 +9,7 @@ export const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
 
-    const { data } = await axios.get('http://localhost:3001/api/products');
+    const { data } = await axios.get('https://mern-ecom-zyjy.onrender.com/api/products');
 
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
